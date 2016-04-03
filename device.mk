@@ -33,11 +33,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/sony/suzuran/rootdir/sbin/mhl_sii8620_8061_drv.ko:root/sbin/mhl_sii8620_8061_drv.ko
+
 # Device Init
 PRODUCT_PACKAGES += \
-    init.recovery.suzuran \
-    init.suzuran \
-    ueventd.suzuran
+    init.recovery.qcom \
+    init.qcom \
+    ueventd.qcom
 
 # Lights
 PRODUCT_PACKAGES += \

@@ -16,6 +16,12 @@ include device/sony/kitakami/PlatformConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := E5823
 
-BOARD_KERNEL_CMDLINE += androidboot.hardware=suzuran
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+
+TW_BRIGHTNESS_PATH := /sys/class/leds/wled/brightness
+TW_MAX_BRIGHTNESS := 4095
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone10/temp
+
+TW_THEME := portrait_hdpi
